@@ -1,1 +1,58 @@
-Hello world!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>CSS Sanity by csssanity</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>CSS Sanity</h1>
+        <h2>Cool CSS minifier written in bash!</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/csssanity" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="csssanity" class="anchor" href="#csssanity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CSSSanity</h1>
+
+<p>Cool CSS minifier written in bash!</p>
+
+<h2>
+<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works?</h2>
+
+<p>First, CSSSanity will use the given file name to determine where to lookup for file to minify.
+Then, it'll use <code>cat</code> to merge files matching <code>*.css</code> pattern in the given file name.
+After that CSSSanity will use some <code>tr</code>, <code>perl</code> and <code>sed</code> commands to remove all the useless characters and save the final minified file in the location you specified!</p>
+
+<p>That's simple as this!</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Online version:</p>
+
+<div class="highlight highlight-source-shell"><pre>wget https://csssanity.pw <span class="pl-k">|</span> bash -e <span class="pl-s"><span class="pl-pds">"</span>static/styles/filename.min.css<span class="pl-pds">"</span></span></pre></div>
+
+<p>Offline version:</p>
+
+<div class="highlight highlight-source-shell"><pre>./csssanity static/styles/filename.min.css</pre></div>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
