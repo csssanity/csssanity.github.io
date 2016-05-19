@@ -38,20 +38,21 @@ tput sgr0;
 
 FILE=$1
 DIR=$(dirname $1)
+TMPFILE=$(mktemp)
 
 # Remove old minified file and tmp (if any).
 rm -f $1
-rm -f csssanity.tmp.css
+rm -f $TMPFILE
 
 # Merge files into one.
-cat ${DIR}/*.css > csssanity.tmp.css
+cat ${DIR}/*.css > $TMPFILE
 
 tput bold; tput setaf 2;
-echo -e "I: Wow, files got merged into csssanity.tmp.css so much faster!";
+echo -e "I: Wow, files got merged into $TMPFILE so much faster!";
 tput sgr0;
 
 # Minify css.
-cat csssanity.tmp.css \
+cat $TMPFILE \
   | tr '\r\n' ' ' \
   | perl -pe 's:/\*.*?\*/::g' \
   | sed \
@@ -73,7 +74,7 @@ tput bold; tput setaf 3;
 echo -e "I: Cleanup temporary files..."
 tput sgr0;
 
-rm -f csssanity.tmp.css
+rm -f $TMPFILE
 
 
 exit 0
