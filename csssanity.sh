@@ -24,11 +24,17 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ##
 
+VERSION=0.1.0
+
 if [ -z "$1" ]; then
-  echo -e "usage: $0 <output_file.min.css>"
-  echo -e "ie. $0 static/styles/file.min.css"
+  echo -e "Usage:   $0 <output_file.min.css>"
+  echo -e "Example: $0 static/styles/file.min.css"
   exit 1
 fi;
+
+tput bold; tput setaf 4;
+echo -e "CSS Sanity v. $VERSION - https://csssanity.pw";
+tput sgr0;
 
 FILE=$1
 DIR=$(dirname $1)
@@ -39,7 +45,10 @@ rm -f csssanity.tmp.css
 
 # Merge files into one.
 cat ${DIR}/*.css > csssanity.tmp.css
-echo -e "Wow, files got merged into $1 so much faster!"
+
+tput bold; tput setaf 2;
+echo -e "I: Wow, files got merged into csssanity.tmp.css so much faster!";
+tput sgr0;
 
 # Minify css.
 cat csssanity.tmp.css \
@@ -56,6 +65,15 @@ cat csssanity.tmp.css \
     -e 's/}[^{]\+{}/}/g' \
   > $1
 
-echo -e "Yay! $1 was created with much fucking success!"
+tput bold; tput setaf 2;
+echo -e "I: Yay! $1 was created with much fucking success!"
+tput sgr0;
+
+tput bold; tput setaf 3;
+echo -e "I: Cleanup temporary files..."
+tput sgr0;
+
 rm -f csssanity.tmp.css
+
+
 exit 0
