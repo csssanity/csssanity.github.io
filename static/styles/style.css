@@ -191,9 +191,12 @@ main {
 .code .line::before {
   content: '$';
   margin-right: 10px;
-  
+
   color: #1fb57b;
   font-weight: bold;
+}
+.code .line {
+  display: block;
 }
 
 .code .app {
