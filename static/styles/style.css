@@ -1,0 +1,162 @@
+/**
+*  Fonts.
+**/
+@font-face {
+    font-family: 'Born';
+    src: url('../fonts/bornaddict-webfont.woff2') format('woff2'),
+         url('../fonts/bornaddict-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+*  HTML reset.
+**/
+html, body {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  font-family: sans-serif;
+  background-color: #fff;
+}
+* { box-sizing: border-box; }
+
+a {
+  color: #e04462;
+  text-decoration: none;
+}
+a:hover {
+  color: #334854;
+}
+
+/* Transitions on hover to avoid blinking elements */
+a:hover, button:hover, input:hover {
+	-webkit-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+}
+
+/**
+*  Wrapper.
+**/
+#wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: calc(100vh - 20px);
+  margin: 20px auto 0 0;
+}
+
+/**
+*  Header.
+**/
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+/**
+*  Logo.
+**/
+#header > #logo {
+  font-size: 48px;
+  font-family: 'Born', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: #e04462;
+  border-bottom: 5px dotted #e04462;
+}
+#header > #logo:hover {
+  color: #f9c535;
+  border-bottom: 5px dotted #f9c535;
+}
+
+/**
+*  Navigation.
+**/
+#header > #menu {
+  display: flex;
+  margin: 10px 0;
+}
+#header > #menu > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+#header > #menu > ul > li {
+  padding: 5px 10px;
+
+  font-size: 14px;
+  font-family: 'Born';
+  letter-spacing: 3px;
+}
+
+/**
+*  Content.
+**/
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  background: linear-gradient(to bottom, #334854 300px, #efecea 300px, #efecea);
+}
+#content {
+
+  max-width: 60%;
+  margin: 50px 0;
+  padding: 20px;
+
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.3);
+}
+#content > h1,
+#content > h2 {
+  margin: 10px 0;
+
+  text-align: center;
+  font-family: 'Born';
+  color: #f36b6b;
+}
+
+#content > .code {
+  margin: 5px 0px;
+  padding: 10px;
+
+  line-height: 20px;
+  font-family: monospace;
+  background-color: #334854;
+  color: #fff;
+}
+
+/**
+*  Code "highlighting"
+**/
+.code .sh {
+  color: #1fb57b;
+  font-weight: bold;
+}
+
+.code .app {
+  color: #c7eeff;
+}
+
+.code .special {
+  color: #f9c535;
+}

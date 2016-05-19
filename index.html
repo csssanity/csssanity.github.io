@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <title>CSS Sanity by csssanity</title>
+    <meta charset="utf-8">
+    <title>CSS Sanity by SkyzohKey</title>
+    <link rel="stylesheet" href="static/styles/style.css">
   </head>
-
   <body>
+    <div id="wrapper">
+      <header id="header">
+        <a id="logo" href="#">CSS Sanity</a>
+        <nav id="menu">
+          <ul>
+            <li><a href="https://github.com/csssanity/csssanity.github.io">View on GitHub</a></li>
+            <li><a href="https://raw.githubusercontent.com/csssanity/csssanity.github.io/master/csssanity.sh">Download</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="content">
+          <h1>CSS Sanity</h1>
+          <h2>Cool CSS minifier written in bash!</h2>
 
-    <header>
-      <div class="container">
-        <h1>CSS Sanity</h1>
-        <h2>Cool CSS minifier written in bash!</h2>
+          <h3>How does it works?</h3>
+          <p>
+            First, CSS Sanity will use the given file name to determine where to lookup for file to minify. Then, it'll use cat to merge files matching *.css pattern in the given file name.
+          </p>
+          <p>
+            After that CSS Sanity will use some tr, perl and sed commands to remove all the useless characters and save the final minified file in the location you specified!
+          </p>
+          <p>
+            That's simple as this!
+          </p>
 
-        <section id="downloads">
-          <a href="https://github.com/csssanity" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h3>Usage</h3>
+          <p>Online version:</p>
+          <div class="code">
+            <span class="sh">$</span> bash <span class="special"><(curl -s https://csssanity.github.io/csssanity.sh)</span> <span class="app">static/styles/file.min.css</span>
+          </div>
 
-    <div class="container">
-      <section id="main_content">
-        <h1>
-<a id="csssanity" class="anchor" href="#csssanity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CSSSanity</h1>
-
-<p>Cool CSS minifier written in bash!</p>
-
-<h2>
-<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works?</h2>
-
-<p>First, CSSSanity will use the given file name to determine where to lookup for file to minify.
-Then, it'll use <code>cat</code> to merge files matching <code>*.css</code> pattern in the given file name.
-After that CSSSanity will use some <code>tr</code>, <code>perl</code> and <code>sed</code> commands to remove all the useless characters and save the final minified file in the location you specified!</p>
-
-<p>That's simple as this!</p>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>Online version:</p>
-
-<div class="highlight highlight-source-shell"><pre>bash <span class="pl-s"><span class="pl-pds">&lt;(</span>curl -s https://csssanity.github.io/csssanity.sh<span class="pl-pds">)</span></span> static/styles/file.min.css</pre></div>
-
-<p>Offline version:</p>
-
-<div class="highlight highlight-source-shell"><pre>./csssanity static/styles/file.min.css</pre></div>
-      </section>
+          <p>Local version:</p>
+          <div class="code">
+            <span class="sh">$</span> wget <span class="app">https://csssanity.github.io/csssanity.sh</span><br>
+            <span class="sh">$</span> ./csssanity.sh <span class="app">static/styles/file.min.css</span>
+          </div>
+        </div>
+      </main>
     </div>
-
-    
   </body>
 </html>
