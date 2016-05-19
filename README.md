@@ -16,5 +16,6 @@ bash <(curl -s https://csssanity.github.io/csssanity.sh) static/styles/file.min.
 
 Offline version:
 ```shell
-./csssanity.sh static/styles/filename.min.css
+$ wget https://csssanity.github.io/csssanity.sh
+$ ./csssanity.sh static/styles/file.min.css 
 ```
