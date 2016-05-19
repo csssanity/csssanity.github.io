@@ -11,7 +11,7 @@ That's simple as this!
 ## Usage
 Online version:
 ```shell
-wget https://csssanity.pw | bash -e "static/styles/filename.min.css"
+bash <(curl -s https://csssanity.github.io/csssanity.sh) static/styles/file.min.css
 ```
 
 Offline version:
