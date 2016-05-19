@@ -40,9 +40,8 @@ FILE=$1
 DIR=$(dirname $1)
 TMPFILE=$(mktemp)
 
-# Remove old minified file and tmp (if any).
+# Remove old minified file (if any).
 rm -f $1
-rm -f $TMPFILE
 
 # Merge files into one.
 cat ${DIR}/*.css > $TMPFILE
