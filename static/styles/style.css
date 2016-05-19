@@ -151,8 +151,9 @@ main {
       -ms-flex: 1;
           flex: 1;
 
-  background: -webkit-linear-gradient(top, #334854 300px, #efecea 300px, #efecea);
+  width: 100%;
 
+  background: -webkit-linear-gradient(top, #334854 300px, #efecea 300px, #efecea);
   background: linear-gradient(to bottom, #334854 300px, #efecea 300px, #efecea);
 }
 #content {
