@@ -33,15 +33,16 @@ fi;
 FILE=$1
 DIR=$(dirname $1)
 
-# Remove old minified file.
+# Remove old minified file and tmp (if any).
 rm -f $1
+rm -f csssanity.tmp.css
 
 # Merge files into one.
-cat ${DIR}/*.css > $1
+cat ${DIR}/*.css > csssanity.tmp.css
 echo -e "Wow, files got merged into $1 so much faster!"
 
 # Minify css.
-cat $1 \
+cat csssanity.tmp.css \
   | tr '\r\n' ' ' \
   | perl -pe 's:/\*.*?\*/::g' \
   | sed \
@@ -56,4 +57,5 @@ cat $1 \
   > $1
 
 echo -e "Yay! $1 was created with much fucking success!"
+rm -f csssanity.tmp.css
 exit 0
